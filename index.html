@@ -3,87 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DormDish Support</title>
-    <!-- Import Poppins font from Google Fonts -->
+    <title>DormDish Information</title>
+    <!-- Use the same styling base -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
         :root {
-            --primary-orange: #e98739; /* App's primary orange */
-            --background-dark: #121212; /* App's dark background */
-            --card-background-dark: #1E1E1E; /* App's dark card background */
-            --text-dark: #EEEEEE; /* App's primary dark text */
-            --text-secondary-dark: #AAAAAA; /* App's secondary dark text */
-            --border-radius: 16px; /* App's standard border radius */
+            --primary-orange: #e98739;
+            --background-dark: #121212;
+            --card-background-dark: #1E1E1E;
+            --text-dark: #EEEEEE;
+            --text-secondary-dark: #AAAAAA;
+            --border-radius: 16px;
         }
-
         body {
             background-color: var(--background-dark);
             color: var(--text-dark);
-            /* Use Poppins font with fallbacks */
-            font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+            font-family: 'Poppins', sans-serif;
             line-height: 1.6;
             margin: 0;
-            padding: 20px; /* Add some padding */
+            padding: 40px 20px;
             display: flex;
-            justify-content: center;
+            flex-direction: column;
             align-items: center;
+            justify-content: center;
             min-height: 100vh;
             text-align: center;
         }
         .container {
             max-width: 600px;
-            padding: 40px; /* Increased padding */
+            width: 100%;
+            padding: 30px;
             background-color: var(--card-background-dark);
-            border-radius: var(--border-radius); /* Match app's border radius */
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Slightly softer shadow */
+            border-radius: var(--border-radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
         }
         h1 {
-            color: var(--primary-orange); /* Use app's primary orange */
-            margin-bottom: 24px; /* Adjusted margin */
+            color: var(--primary-orange);
+            margin-bottom: 20px;
             font-weight: 600;
-            font-size: 2em; /* Slightly larger title */
         }
         p {
-            margin-bottom: 20px; /* Consistent margin */
-            font-size: 1.1em;
-            color: var(--text-secondary-dark); /* Use secondary text color for description */
+             color: var(--text-secondary-dark);
+             margin-bottom: 30px;
         }
-        p.contact-instruction {
-             color: var(--text-dark); /* Use primary text color for the instruction */
-             margin-bottom: 10px; /* Less margin before the email */
-        }
-        a {
-            color: var(--primary-orange); /* Use app's primary orange for link */
+        .links a {
+            display: inline-block;
+            background-color: var(--primary-orange);
+            color: var(--background-dark); /* Dark text on orange button */
+            padding: 12px 25px;
+            margin: 10px;
+            border-radius: var(--border-radius);
             text-decoration: none;
             font-weight: 500;
-            transition: opacity 0.2s ease; /* Smooth hover effect */
+            transition: background-color 0.3s ease, transform 0.2s ease;
         }
-        a:hover {
-            /* text-decoration: underline; */ /* Remove underline on hover for cleaner look */
-            opacity: 0.8; /* Slight fade on hover */
+        .links a:hover {
+            background-color: #d6732a; /* Slightly darker orange on hover */
+            transform: translateY(-2px); /* Slight lift effect */
         }
-        .email-link {
-             word-break: break-all;
-             font-weight: 600; /* Make email slightly bolder */
-             font-size: 1.15em; /* Make email slightly larger */
+        .links a:active {
+             transform: translateY(0); /* Reset transform on click */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>DormDish Support</h1>
-        <p>
-            Need help with the DormDish app? Have questions or feedback?
-            Please reach out to our support team via email.
-        </p>
-        <p class="contact-instruction">
-            Contact us at:
-        </p>
-        <p>
-            <a href="mailto:info.dormdish@gmail.com" class="email-link">info.dormdish@gmail.com</a>
-        </p>
+        <h1>DormDish Information</h1>
+        <p>Welcome to the official information page for the DormDish app.</p>
+        <div class="links">
+            <a href="contact.html">Contact & Support</a>
+            <a href="privacyandpolicy.html">Privacy Policy</a>
+        </div>
     </div>
 </body>
 </html> 
